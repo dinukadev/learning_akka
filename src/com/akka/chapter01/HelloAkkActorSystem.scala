@@ -1,9 +1,10 @@
 package com.akka.chapter01
 
-import akka.actor.ActorSystem
+import akka.actor.{ActorSystem, Props}
 
 object HelloAkkActorSystem extends App {
 
   val actorSystem = ActorSystem("HelloAkka")
-  println(actorSystem)
+  val actor = actorSystem.actorOf(Props[SummingActor], "summingActor")
+  println(actor.path)
 }
