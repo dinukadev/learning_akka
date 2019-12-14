@@ -8,6 +8,6 @@ object HelloAkkActorSystem extends App {
   val actorSystem = ActorSystem("HelloAkka")
   val actor = actorSystem.actorOf(Props[SummingActor], "summingActor")
   println(actor.path)
-  val actorWithParam = actorSystem.actorOf(Props(classOf[SummingActorWithInitialParam], 10), "summinActorWithInitialParam")
+  val actorWithParam = actorSystem.actorOf(Props(classOf[SummingActorWithInitialParam], 10), "summingActorWithInitialParam")
   println(actorWithParam.path)
 }
